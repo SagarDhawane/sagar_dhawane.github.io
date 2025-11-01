@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Dhawane - Cloud & Agentic AI Data Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2.8em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.3s; }
+        .section:nth-child(5) { animation-delay: 0.4s; }
+        .section:nth-child(6) { animation-delay: 0.5s; }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #555;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item, .project-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover, .project-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .company {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .role {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .date {
+            color: #888;
+            font-style: italic;
+        }
+
+        .tech-stack {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .cert-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .education {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .education h3 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .skills-grid, .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sagar Dhawane</h1>
+            <div class="subtitle">Cloud & Agentic AI Data Engineer | ~3 Years Experience</div>
+            <p>Designing scalable, event-driven data pipelines across AWS, GCP, and Azure. Building LLM-powered agentic systems for intelligent automation.</p>
+            <div class="contact-links">
+                <a href="mailto:sagardhawane1000@gmail.com">📧 Email</a>
+                <a href="https://github.com/Sagar-Dhawane" target="_blank">🔗 GitHub</a>
+                <a href="tel:8975661311">📱 8975661311</a>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>💼 Professional Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">Capgemini</div>
+                        <div class="role">Cloud Data Engineer</div>
+                    </div>
+                    <div class="date">Apr 2023 – Present | Mumbai, MH</div>
+                </div>
+                
+                <h4 style="color: #667eea; margin-top: 15px;">Procurement Incremental Data Pipeline (GE Aerospace)</h4>
+                <div class="tech-stack">🛠️ PySpark, AWS Glue, Lambda, Kinesis, Redshift, EventBridge, Step Function, SNS, Databricks</div>
+                
+                <ul>
+                    <li>Designed event-driven ETL pipelines using AWS Glue, Lambda, Kinesis, and Redshift for batch and near real-time streaming data ingestion</li>
+                    <li>Automated pipeline orchestration with Step Functions and EventBridge, reducing manual intervention and improving SLA adherence by 60%</li>
+                    <li>Engineered real-time streaming pipeline using Confluent Kafka and Databricks Structured Streaming with sub-minute latency</li>
+                    <li>Implemented Delta Live Tables (DLT) and SCD Type 2 logic for schema evolution and reliable data delivery</li>
+                    <li>Developed Lambda functions for CloudWatch metrics monitoring, improving automation by 80%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Featured Projects</h2>
+            
+            <div class="project-item">
+                <h3 style="color: #667eea;">CDC Data Pipeline using AWS Glue & Apache Hudi</h3>
+                <div class="tech-stack">🛠️ Python, DynamoDB, Kinesis, Firehose, Lambda, S3, Glue, Apache Hudi, Athena, QuickSight</div>
+                <ul>
+                    <li>Built near real-time CDC pipeline achieving <1 sec latency with DynamoDB Streams and Kinesis</li>
+                    <li>Implemented automated schema discovery with 98%+ data accuracy using Glue Crawlers and Apache Hudi</li>
+                    <li>Achieved fully automated orchestration with 10-minute refresh cycles for Athena and QuickSight dashboards</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3 style="color: #667eea;">Streaming Data Pipeline with Delta Live Tables</h3>
+                <div class="tech-stack">🛠️ PySpark, Databricks, Delta Lake, DLT, Autoloader</div>
+                <ul>
+                    <li>Designed reusable Medallion Architecture framework (Bronze, Silver, Gold layers)</li>
+                    <li>Automated data processing with Databricks Autoloader and DLT, handling schema evolution and CDC</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Agentic AI</h3>
+                    <div class="skill-tags">
+                        <span class="tag">CrewAI</span>
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">AutoGen</span>
+                        <span class="tag">MCP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PySpark</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Big Data</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Apache Spark</span>
+                        <span class="tag">Databricks</span>
+                        <span class="tag">Kafka</span>
+                        <span class="tag">Airflow</span>
+                        <span class="tag">Hudi</span>
+                        <span class="tag">Iceberg</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AWS</h3>
+                    <div class="skill-tags">
+                        <span class="tag">S3</span>
+                        <span class="tag">Lambda</span>
+                        <span class="tag">Glue</span>
+                        <span class="tag">Kinesis</span>
+                        <span class="tag">Redshift</span>
+                        <span class="tag">Athena</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>GCP & Azure</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Dataproc</span>
+                        <span class="tag">Pub/Sub</span>
+                        <span class="tag">BigQuery</span>
+                        <span class="tag">ADF</span>
+                        <span class="tag">ADLS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Data Warehousing</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Snowflake</span>
+                        <span class="tag">Redshift</span>
+                        <span class="tag">BigQuery</span>
+                        <span class="tag">QuickSight</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏆 Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item">Databricks Certified Data Engineer Associate</div>
+                <div class="cert-item">SnowPro Core Certification</div>
+                <div class="cert-item">AWS Cloud Practitioner</div>
+                <div class="cert-item">GCP Cloud Digital Leader</div>
+                <div class="cert-item">GCP Cloud Engineer</div>
+                <div class="cert-item">Oracle Generative AI Professional</div>
+                <div class="cert-item">Oracle Cloud Developer Professional</div>
+                <div class="cert-item">Oracle Application Integration Professional</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <div class="education">
+                <h3>B.E. in Information Technology</h3>
+                <p><strong>Savitribai Phule Pune University</strong></p>
+                <p>Aug 2018 – Apr 2022</p>
+                <p style="margin-top: 10px;"><strong>CGPA:</strong> 9.12/10 | <strong>SGPA:</strong> 9.82/10</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
