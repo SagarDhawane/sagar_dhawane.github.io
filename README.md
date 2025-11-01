@@ -58,7 +58,6 @@ Cloud & Agentic AI Data Engineer with **~3 years of experience** designing scala
 
 ## 💼 PROFESSIONAL EXPERIENCE
 
-### **Capgemini** | Mumbai, MH
 **Cloud Data Engineer** | *Apr 2023 – Present*
 
 #### Procurement Incremental Data Pipeline (Client: GE Aerospace)
